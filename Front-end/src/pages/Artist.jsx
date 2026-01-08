@@ -1,0 +1,51 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { Link, useParams } from "react-router-dom";
+import SongList from "../components/SongList.jsx";
+import { songsArray } from "../assets/database/songs.js";
+import { artistArray } from "../assets/database/artists.js";
+
+
+const Artist = () => {
+const {id} = useParams();
+const artistobj = artistArray.filter((currentArtisObj) => currentArtisObj.id === Number(id))[0];
+
+const songsArrayFromArtist = songsArray.filter((currentSongObj) => currentSongObj.artist === artistobj.name);
+
+
+const ramdomIndex = Math.floor(Math.random()*(songsArrayFromArtist.length - 1)); //este é o indice dentro das opções de escolha e não o id da música
+const ramdomIdFromArtist = songsArrayFromArtist[ramdomIndex].id;
+return (
+  <div className="artist">
+      <div className="artist__header"
+      style={{
+        backgroundImage:`linear-gradient(to bottom, var(--_shade), var(--_shade)),url(${artistobj.banner})`,
+      }}
+      >
+        <h2 className="artist__title">{artistobj.name}</h2>
+      </div>
+
+      <div className="artist__body">
+    <h2>Populares</h2>
+
+      <SongList
+      songsArray={songsArrayFromArtist} 
+      />
+
+      
+      </div>
+      
+      <Link to={`/song/${ramdomIdFromArtist}`}>
+        <FontAwesomeIcon
+        className="single-item__icon single-item__icon--artist"
+        icon={faCirclePlay}/>
+        </Link>
+
+      </div>
+
+  )
+
+};
+
+export default Artist;

@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"name": "sklearn",
+			"path": "../../.."
+		},
+		{
+			"name": "aula 6",
+			"path": "../../../../aula 6"
+		},
+		{
+			"name": "aula 9,10,11",
+			"path": "../../../../aula 9,10,11"
+		},
+		{
+			"name": "aula 15",
+			"path": "../../../../aula 15"
+		},
+		{
+			"name": "aula 16",
+			"path": "../../../../aula 16"
+		},
+		{
+			"name": "aula_13,14",
+			"path": "../../../../aula_13,14"
+		},
+		{
+			"name": "flask",
+			"path": "../../../../flask"
+		},
+		{
+			"name": "modelo",
+			"path": "../../../../modelo"
+		},
+		{
+			"name": "modelo_2",
+			"path": "../../../../modelo_2"
+		},
+		{
+			"name": "python",
+			"path": "../../../../python"
+		},
+		{
+			"name": "site teste",
+			"path": "../../../../site teste"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sklearn"
+	}
+}
